@@ -48,5 +48,14 @@ public class MenuActivity extends AppCompatActivity {
                 MenuActivity.this.startActivity(menu_to_goals);
             }
         });
+
+        (findViewById(R.id.off_home)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menu_to_home= new Intent(MenuActivity.this,MenuActivity.class);
+                MenuActivity.this.startActivity(menu_to_home);
+                CustomIntent.customType(MenuActivity.this,   "left-to-right");
+            }
+        });
     }
 }
