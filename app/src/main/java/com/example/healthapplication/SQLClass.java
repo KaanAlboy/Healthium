@@ -64,7 +64,6 @@ public class SQLClass extends SQLiteOpenHelper {
         contentValues.put(col11, caloriesActivity);
         contentValues.put(col12, minHeartbeat);
         contentValues.put(col13, maxHeartbeat);
-
         long result = db.insert(mainTableName, null, contentValues);
 
         if (result == -1){
