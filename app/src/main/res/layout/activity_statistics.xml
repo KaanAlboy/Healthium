@@ -42,21 +42,26 @@
             android:layout_width="match_parent"
             android:layout_height="373dp">
 
-           <RelativeLayout
+           <GridLayout
                android:layout_width="match_parent"
-               android:layout_height="match_parent">
+               android:layout_height="match_parent"
+               android:columnCount="1"
+               android:rowCount="5">
 
-               <com.github.mikephil.charting.charts.BarChart
+               <com.github.mikephil.charting.charts.LineChart
                    android:id="@+id/stepChart"
                    android:layout_width="match_parent"
                    android:layout_height="150dp">
+               </com.github.mikephil.charting.charts.LineChart>
+               <com.github.mikephil.charting.charts.LineChart
+                   android:id="@+id/distanceChart"
+                   android:layout_width="match_parent"
+                   android:layout_height="150dp">
+               </com.github.mikephil.charting.charts.LineChart>
+
+           </GridLayout>
 
 
-
-
-               </com.github.mikephil.charting.charts.BarChart>
-
-           </RelativeLayout>
 
         </ScrollView>
 

@@ -2,11 +2,16 @@ package com.example.healthapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import com.github.mikephil.charting.data.Entry;
+
+import java.util.ArrayList;
 
 public class SQLClass extends SQLiteOpenHelper {
     public static final String databaseName = "TestDB";
@@ -28,6 +33,7 @@ public class SQLClass extends SQLiteOpenHelper {
     public static final String stepTableName = "stepTable";
     public static final String calorieTableName = "calorieTable";
     public static final String heartbeatTableName = "heartbeatTable";
+    public static final String activityTableName = "activityTable";
 
 
 
@@ -87,10 +93,38 @@ public class SQLClass extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + stepTableName);
         db.execSQL("DROP TABLE IF EXISTS " + calorieTableName);
         db.execSQL("DROP TABLE IF EXISTS " + heartbeatTableName);
+        db.execSQL("DROP TABLE IF EXISTS " + activityTableName);
         //Create subtables.
         db.execSQL("CREATE TABLE " + stepTableName + " AS SELECT ID, STEPS, DISTANCE, FLOOR FROM " + mainTableName + " ORDER BY ID DESC LIMIT 30");
         db.execSQL("CREATE TABLE " + calorieTableName + " AS SELECT ID, CALORIES_BURNED, CALORIES_BURNED_DURING_ACTIVITY FROM " + mainTableName + " ORDER BY ID DESC LIMIT 30");
         db.execSQL("CREATE TABLE " + heartbeatTableName + " AS SELECT ID, MINIMUM_HEARTBEAT, MAXIMUM_HEARTBEAT FROM " + mainTableName + " ORDER BY ID DESC LIMIT 30");
+        db.execSQL("CREATE TABLE " + activityTableName + " AS SELECT ID, MIN_OF_SITTING, MIN_OF_SLOW_ACTIVITY, MIN_OF_MODERATE_ACTIVITY, MIN_OF_INTENSE_ACTIVITY FROM " + mainTableName + " ORDER BY ID DESC LIMIT 30");
+    }
+
+    public ArrayList<ArrayList<Entry>> stepTable(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<Entry> steps = new ArrayList<>();
+        ArrayList<Entry> distance = new ArrayList<>();
+        ArrayList<ArrayList<Entry>> stepArrayList = new ArrayList<>();
+        float x = 1;
+        Cursor cursor = db.rawQuery("SELECT STEPS FROM " + stepTableName, null);
+        while(cursor.moveToNext()){
+
+            steps.add(new Entry(x,(float)(cursor.getInt(0))));
+            x++;
+        }
+
+        cursor = db.rawQuery("SELECT DISTANCE FROM " + stepTableName, null);
+        x=1;
+        while(cursor.moveToNext()){
+
+            distance.add(new Entry(x,(float)(cursor.getInt(0))));
+            x++;
+        }
+        stepArrayList.add(steps);
+        stepArrayList.add(distance);
+
+        return stepArrayList;
     }
 
 }
