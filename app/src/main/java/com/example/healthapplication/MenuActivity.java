@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //////////////////////INTENTS
         ((CardView)findViewById(R.id.statisticsCard)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +50,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        (findViewById(R.id.off_home)).setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.home_icon)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent menu_to_home= new Intent(MenuActivity.this,MenuActivity.class);
@@ -57,5 +58,8 @@ public class MenuActivity extends AppCompatActivity {
                 CustomIntent.customType(MenuActivity.this,   "left-to-right");
             }
         });
+        ////////////////////INTENTS ENDS
+
+
     }
 }

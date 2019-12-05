@@ -10,9 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="152dp">
+        android:orientation="vertical">
 
 
         <RelativeLayout
@@ -27,12 +25,21 @@
                 android:layout_centerHorizontal="true"
                 app:srcCompat="@drawable/logo" />
 
+            <Button
+                android:id="@+id/button_pick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#2196F3"
+                android:text="PICK FILE"
+                android:textColor="#FFFFFF" />
+
 
         </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="327dp">
+            android:layout_height="373dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,57 +52,155 @@
                     android:columnCount="2"
                     android:rowCount="3">
 
-                    <ProgressBar
-                        android:id="@+id/progressSteps"
-                        style="?android:attr/progressBarStyle"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:layout_margin="20dp"
-                        android:indeterminate="false"
-                        android:max="100"
-                        android:scrollbarSize="4dp" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/stepsBarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
 
-                    <ProgressBar
-                        android:id="@+id/progressStatistics"
-                        style="?android:attr/progressBarStyle"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:layout_margin="20dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
 
-                    <ProgressBar
-                        android:id="@+id/progressCalorie"
-                        style="?android:attr/progressBarStyle"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_row="1"
-                        android:layout_column="0"
-                        android:layout_margin="20dp" />
+                            <TextView
+                                android:id="@+id/StepProgressBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:layout_marginTop="1dp"
+                                android:text="Steps"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
 
-                    <ProgressBar
-                        android:id="@+id/progressHeartR"
-                        style="?android:attr/progressBarStyle"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_row="1"
-                        android:layout_column="1"
-                        android:layout_margin="20dp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressSteps"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false" />
+
+                            <TextView
+                                android:id="@+id/stepStatHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+
+                                android:layout_marginTop="12dp"
+                                android:text="7433/8000"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/caloriesBarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/CaloriesProgressBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:layout_marginTop="1dp"
+                                android:text="Calories"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressCalories"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false" />
+
+                            <TextView
+                                android:id="@+id/caloriesStatHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:layout_marginTop="12dp"
+                                android:text="2753"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/heartRBarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:id="@+id/HeartRProgressBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:layout_marginTop="1dp"
+                                android:text="Avg. Heart Rate"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+
+                            <ProgressBar
+                                android:id="@+id/progressHeartR"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:indeterminate="false" />
+
+                            <TextView
+                                android:id="@+id/heartStatHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|top"
+                                android:layout_marginTop="12dp"
+                                android:text="95 BPM"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
                 </GridLayout>
 
             </LinearLayout>
         </ScrollView>
-
-        <Button
-            android:id="@+id/button_pick"
-            android:layout_width="373dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="#2196F3"
-            android:text="PICK FILE"
-            android:textColor="#FFFFFF" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -117,7 +222,7 @@
                 app:srcCompat="@drawable/offmenu" />
 
             <ImageView
-                android:id="@+id/on_home"
+                android:id="@+id/home_icon"
                 android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"

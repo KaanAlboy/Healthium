@@ -34,15 +34,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:alignmentMode="alignMargins"
+                    android:alignmentMode="alignBounds"
                     android:columnCount="2"
                     android:columnOrderPreserved="false"
-                    android:rowCount="3">
+                    android:rowCount="2">
 
 
                     <androidx.cardview.widget.CardView
@@ -53,7 +53,6 @@
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
                         android:clickable="true"
-
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -192,6 +191,7 @@
 
 
                     </androidx.cardview.widget.CardView>
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/historyCard"
                         android:layout_width="wrap_content"
@@ -229,10 +229,6 @@
                     </androidx.cardview.widget.CardView>
 
 
-
-
-
-
                 </GridLayout>
             </LinearLayout>
         </ScrollView>
@@ -248,7 +244,7 @@
 
 
             <ImageView
-                android:id="@+id/on_menu"
+                android:id="@+id/off_menu"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -256,7 +252,7 @@
                 app:srcCompat="@drawable/onmenu" />
 
             <ImageView
-                android:id="@+id/off_home"
+                android:id="@+id/home_icon"
                 android:layout_width="132dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -271,6 +267,7 @@
                 android:layout_column="2"
                 app:srcCompat="@drawable/off" />
         </GridLayout>
+
     </LinearLayout>
 
 
