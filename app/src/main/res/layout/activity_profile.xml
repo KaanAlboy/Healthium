@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgson"
-    tools:context=".EditProfileActivity">
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -36,184 +36,101 @@
                 android:layout_height="wrap_content">
 
 
+
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="30dp"
                     android:layout_marginTop="10dp"
                     tools:srcCompat="@tools:sample/avatars" />
-
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp"
-                    >
-                    <LinearLayout
-                        android:layout_width="190dp"
-                        android:layout_height="match_parent">
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="left|center"
-                            android:text="Set User Name > "
-                            android:textAlignment="center"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp">
-
-
-                        <EditText
-                            android:id="@+id/set_name"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="left"
-                            android:hint="Name"
-                            android:singleLine="true"
-                            android:textAlignment="gravity"
-                            android:textSize="18sp"
-                            android:background="@android:color/transparent"/>
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-
-                <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="190dp"
-                    android:layout_height="match_parent">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left|center"
-                        android:text="Set Weight > "
-
-                        android:textAlignment="center"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp">
-
-                    <EditText
-                        android:id="@+id/set_weight"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left"
-                        android:hint="Weight"
-                        android:singleLine="true"
-                        android:textAlignment="gravity"
-                        android:textSize="18sp"
-                        android:background="@android:color/transparent"/>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp"
-                    >
-                    <LinearLayout
-                        android:layout_width="190dp"
-                        android:layout_height="match_parent">
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="left|center"
-                            android:text="Set Height >"
-                            android:textAlignment="center"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp">
-
-                        <EditText
-                            android:id="@+id/set_height"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="left"
-                            android:hint="Height"
-                            android:singleLine="true"
-                            android:textAlignment="gravity"
-                            android:textSize="18sp"
-                            android:background="@android:color/transparent"/>
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp"
-            >
-            <LinearLayout
-                android:layout_width="190dp"
-                android:layout_height="match_parent">
-
                 <TextView
 
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="left|center"
-                    android:text="Set Weight Goal > "
-                    android:textAlignment="center"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp">
-
-                <EditText
-                    android:id="@+id/set_weightGoal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="left"
-                    android:hint="New Weight Goal"
-                    android:singleLine="true"
-                    android:textAlignment="gravity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Kadir Guvel"
                     android:textSize="18sp"
-                    android:background="@android:color/transparent"/>
+                    android:textAlignment="center"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center"
+                            android:textAlignment="gravity"
+
+                            android:text="Weight:73 kg"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center"
+                            android:textAlignment="gravity"
+
+                            android:text="Height:178 cm"
+                            android:textSize="18sp" />
 
 
-            </LinearLayout>
+                    </LinearLayout>
 
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center"
+                            android:textAlignment="gravity"
+                            android:text="Steps Goal: 8000 step"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp">
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center"
+                            android:textAlignment="gravity"
+                            android:text="Weight Goal: 77 kg"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -233,8 +150,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="left|center"
-                            android:text="Set Step Goal > "
-                            android:textAlignment="center"
+                            android:textAlignment="gravity"
+                            android:text="Steps Goal: 8000 step"
                             android:textSize="18sp" />
                     </LinearLayout>
 
@@ -243,24 +160,20 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp">
 
-                        <EditText
-                            android:id="@+id/set_stepGoal"
+                        <TextView
+
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="left"
-                            android:hint="New Step Goal"
-                            android:singleLine="true"
+                            android:layout_gravity="left|center"
                             android:textAlignment="gravity"
-                            android:textSize="18sp"
-                            android:background="@android:color/transparent"/>
+
+                            android:textSize="18sp" />
 
 
                     </LinearLayout>
 
 
                 </LinearLayout>
-
-
 
 
             </TableLayout>
@@ -281,12 +194,12 @@
 
 
             <ImageView
-                android:id="@+id/menu_icon"
+                android:id="@+id/off_menu"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_column="0"
-                app:srcCompat="@drawable/offmenu" />
+                app:srcCompat="@drawable/onmenu" />
 
             <ImageView
                 android:id="@+id/home_icon"
@@ -297,12 +210,12 @@
                 app:srcCompat="@drawable/offhome" />
 
             <ImageView
-                android:id="@+id/profile_icon"
+                android:id="@+id/off_profile"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_column="2"
-                app:srcCompat="@drawable/on" />
+                app:srcCompat="@drawable/off" />
         </GridLayout>
     </LinearLayout>
 
